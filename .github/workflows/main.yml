@@ -1,0 +1,12 @@
+name: First workflow
+on:
+  push:
+    branches:
+      - main 
+jobs:
+  example-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: first echo
+        run: echo "welcome to our first commit "
+      
