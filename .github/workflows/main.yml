@@ -9,4 +9,9 @@ jobs:
     steps:
       - name: first echo
         run: echo "welcome to our first commit "
+      - name: check out repo 
+        uses: actions/checkout@v6.0.2
+
+      - name : listing repo
+        run: ls -la
       
