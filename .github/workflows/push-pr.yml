@@ -1,0 +1,18 @@
+name: push-trigger
+on: 
+    push:
+        branches:
+          - main
+          - "releases/**"
+    pull_request:
+        branches:
+          - main
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout code
+              uses: actions/checkout@v6.0.2
+              
+            - name: run test
+              run: npm test
